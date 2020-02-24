@@ -34,11 +34,8 @@ indCh2 = contains(channelNames,chNames{2});
 
 % plot1 = detrend(convertedData.Data.MeasuredData(indCh1).Data*scale.m+scale.c);
 plot1 = convertedData.Data.MeasuredData(indCh1).Data;
-if scale.m < 0
-    plot2 = detrend(convertedData.Data.MeasuredData(indCh2).Data*scale.m+scale.c);
-else
-    plot2 = -detrend(convertedData.Data.MeasuredData(indCh2).Data*scale.m+scale.c);
-end
+plot2 = detrend(convertedData.Data.MeasuredData(indCh2).Data*scale.m+scale.c);
+
 time  = linspace(sTime,eTime,length(plot1))';
 sIndex = 1;
 eIndex = length(plot1);

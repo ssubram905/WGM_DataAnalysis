@@ -34,8 +34,8 @@ eTime = time(end);
 plot1 = zeros(eIndex-sIndex+1,ndata);
 plot2 = zeros(eIndex-sIndex+1,ndata);
 for i = 1:ndata
-    plot1(:,i) = (fileinfo.data(sIndex:eIndex,i+1) - min(fileinfo.data(sIndex:eIndex,i+1)))*1e6;
-    plot2(:,i) = fileinfo.data(sIndex:eIndex,i+ndata+1)*1e6;
+    plot1(:,i) = (fileinfo.data(sIndex:eIndex,i+1) - min(fileinfo.data(sIndex:eIndex,i+1)));
+    plot2(:,i) = fileinfo.data(sIndex:eIndex,i+ndata+1);
 end
 
 results.sIndex = 1;

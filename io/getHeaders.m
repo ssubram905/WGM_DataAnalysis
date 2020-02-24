@@ -13,7 +13,7 @@ if strcmpi(fileProps.ext,'.txt')
     comment = comment(:,1);
     sindex = find(contains(comment,'Comment'));
     if ~isempty(sindex)
-        eindex = find(contains(comment,'TresholdMethod'))-1;
+        eindex = find(or(contains(comment,'TresholdMethod'),contains(comment,'Time')))-1;
         comment = comment(sindex:eindex);
     end
     t = fileProps.FileInfo.data(:,1);

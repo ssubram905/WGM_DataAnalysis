@@ -121,13 +121,13 @@ try
     ax2.XGrid = 'on';
     ax2.YGrid = 'on';
     ax2.BoxStyle = 'back';
-    ax2.YTick = round(linspace(floor(min(y2)/10)*10,ceil(max(y2+5)/10)*10,3));
+%     ax2.YTick = round(linspace(floor(min(y2)/10)*10,ceil(max(y2+5)/10)*10,3));
     if ~isempty(xlim)
         ax2.XLim = xlim;
     else
         ax2.XLim = [min(x) max(x)];
     end
-    ax2.YLim = [min(y2)-3 max(y2)+5];
+%     ax2.YLim = [min(y2)-3 max(y2)+5];
     ax2.FontName = 'Helvetica';
     ax2.FontSize = 22;
     ax2.YLabel.Interpreter = 'latex';
