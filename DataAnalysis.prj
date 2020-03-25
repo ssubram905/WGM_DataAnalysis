@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="2428832924" file="U:\matlabPeakAnalysis\DataAnalysis.prj" location="U:\matlabPeakAnalysis" name="DataAnalysis" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3956191431" file="D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\DataAnalysis.prj" location="D:\OneDrive - University of Exeter\MATLAB\DataAnalysis" name="DataAnalysis" target="target.mlapps" target-name="Package App">
     <param.appname>DataAnalysis</param.appname>
     <param.authnamewatermark>Sivaraman Subramanian</param.authnamewatermark>
     <param.email>ss905@exeter.ac.uk</param.email>
@@ -10,44 +10,50 @@
       <file>${PROJECT_ROOT}\DataAnalysis_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\DataAnalysis_resources\icon_16.png</file>
     </param.icons>
-    <param.summary>Data analysis of time traces</param.summary>
-    <param.description>Load, detrend, filter and analysis time traces with peaks and steps.
-Accepts data as tab separated TXT or NI Labview TDMS files</param.description>
-    <param.screenshot />
+    <param.summary>App to perform peak and step analysis of WGM signals exracted from spectra.</param.summary>
+    <param.description>WGM peak analysis software
+Detect peaks from Txt or TDMS files
+Detect steps from Text of TDMS files
+store data into .mat files
+Analyse stored data to output histograms</param.description>
+    <param.screenshot>C:\Users\ss905\AppData\Local\Temp\tpebc83baa_22e9_4f75_84a3_a57fa02d3f53.png</param.screenshot>
     <param.version>1.0</param.version>
-    <param.products.name />
-    <param.products.id />
-    <param.products.version />
+    <param.products.name>
+      <item>MATLAB</item>
+      <item>Bioinformatics Toolbox</item>
+      <item>Curve Fitting Toolbox</item>
+      <item>Econometrics Toolbox</item>
+      <item>Signal Processing Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+      <item>83</item>
+      <item>60</item>
+      <item>125</item>
+      <item>8</item>
+    </param.products.id>
+    <param.products.version>
+      <item>9.8</item>
+      <item>4.14</item>
+      <item>3.5.11</item>
+      <item>5.4</item>
+      <item>8.4</item>
+    </param.products.version>
     <param.platforms />
-    <param.output>U:\matlabPeakAnalysis</param.output>
+    <param.output>${PROJECT_ROOT}</param.output>
     <param.guid>0cffcc8a-ec9e-4f2c-9a12-f320872f4e44</param.guid>
     <unset>
       <param.authnamewatermark />
       <param.email />
       <param.company />
-      <param.screenshot />
       <param.version />
-      <param.products.name />
-      <param.products.id />
-      <param.products.version />
       <param.platforms />
       <param.output />
     </unset>
     <fileset.main>
       <file>${PROJECT_ROOT}\DataAnalysis.mlapp</file>
     </fileset.main>
-    <fileset.depfun>
-      <file>U:\MATLAB\Add-Ons\Apps\DataAnalysis\code\isad.isadroot.ex.ac.uk\UOE\User\MATLAB\DataExtraction\Convert_TDMS\convertToText.m</file>
-      <file>U:\MATLAB\Add-Ons\Apps\DataAnalysis\code\isad.isadroot.ex.ac.uk\UOE\User\MATLAB\DataExtraction\Convert_TDMS\getChannelInfo.m</file>
-      <file>U:\MATLAB\Add-Ons\Apps\DataAnalysis\code\isad.isadroot.ex.ac.uk\UOE\User\MATLAB\DataExtraction\Convert_TDMS\getDataSize.m</file>
-      <file>U:\MATLAB\Add-Ons\Apps\DataAnalysis\code\isad.isadroot.ex.ac.uk\UOE\User\MATLAB\DataExtraction\Convert_TDMS\getScanRate.m</file>
-      <file>U:\MATLAB\Add-Ons\Apps\DataAnalysis\code\isad.isadroot.ex.ac.uk\UOE\User\MATLAB\DataExtraction\Convert_TDMS\hasRawDataInSeg.m</file>
-      <file>U:\MATLAB\Add-Ons\Apps\DataAnalysis\code\isad.isadroot.ex.ac.uk\UOE\User\MATLAB\DataExtraction\Convert_TDMS\LV2MatlabDataType.m</file>
-      <file>U:\MATLAB\Add-Ons\Apps\DataAnalysis\code\isad.isadroot.ex.ac.uk\UOE\User\MATLAB\DataExtraction\Convert_TDMS\postProcess.m</file>
-      <file>U:\MATLAB\PeakDetection\peakfinder\peakfinder.m</file>
-      <file>U:\MATLAB\PeakFinder\findpeaksG.m</file>
-      <file>U:\MATLAB\PeakFinder\findsteps.m</file>
-    </fileset.depfun>
+    <fileset.depfun />
     <fileset.resources>
       <file>${PROJECT_ROOT}\DataAnalysis_resources</file>
       <file>${PROJECT_ROOT}\io</file>
@@ -58,12 +64,25 @@ Accepts data as tab separated TXT or NI Labview TDMS files</param.description>
     </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file location="U:\" name="matlabPeakAnalysis" optional="false">U:\matlabPeakAnalysis</file>
+      <file location="D:\OneDrive - University of Exeter\MATLAB" name="DataAnalysis" optional="false">D:\OneDrive - University of Exeter\MATLAB\DataAnalysis</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\Matlab\R2018a</root>
-      <toolboxes />
+      <root>D:\Program Files\Matlab\R2020a</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
     </matlab>
     <platform>
       <unix>false</unix>
