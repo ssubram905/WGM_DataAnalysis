@@ -16,7 +16,7 @@ addOptional(p,'xlabel','Time [s]',@(x) ischar(x) || isstring(x));
 addOptional(p,'ylabel_1','$\Delta \lambda$ [fm]',@(x) ischar(x) || isstring(x));
 addOptional(p,'ylabel_2','$\Delta \lambda$ [fm]',@(x) ischar(x) || isstring(x));
 addOptional(p,'xlim',[],@(x)  all(size(x) == [1 2]));
-addOptional(p,'ylim',[],@(x)  all(size(x) == [1 2]));
+addOptional(p,'ylim',[],@(x)  all(size(x) == [2 2]));
 addOptional(p,'sel',[]);
 
 try
@@ -94,7 +94,7 @@ try
         ax1.XLim = [min(x) max(x)];
     end
     if ~isempty(ylim)
-        ax1.YLim = ylim;
+        ax1.YLim = ylim(1,:);
     else
         ax1.YLim = [min(y1)-5 max(y1)+5];
     end
@@ -127,7 +127,11 @@ try
     else
         ax2.XLim = [min(x) max(x)];
     end
-%     ax2.YLim = [min(y2)-3 max(y2)+5];
+    if ~isempty(ylim)
+        ax2.YLim = ylim(2,:);
+    else
+        ax2.YLim = [min(y2)-5 max(y2)+5];
+    end
     ax2.FontName = 'Helvetica';
     ax2.FontSize = 22;
     ax2.YLabel.Interpreter = 'latex';
@@ -143,7 +147,7 @@ try
         plotsubpeaks(gca(),data, peaks.plot2Peaks,field{i});
     end
     hold off
-    
+
     ax2.Units = 'centimeters';
     ax2.Position = [3.5 2.2 15.25 5.75];
     ax1.YLabel.Position(1) = ax2.YLabel.Position(1);
