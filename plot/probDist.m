@@ -1,4 +1,4 @@
-function [x, p, f, yfit] = probDist(intervalMS, DelT,ax)
+function [x, p, f, yfit, gof] = probDist(intervalMS, DelT,ax)
 % probabilityDist - calculates the rate distribution for the given interval
 %                   array. This function provides an one parameter
 %                   exponential fit and returns the fitted rate.
@@ -17,10 +17,10 @@ options = fitoptions('exp1');
 options.StartPoint = 0;
 options.Lower = 0;
 options.Upper = Inf;
-f = fit(x.',p,func,options);
+[f, gof] = fit(x.',p,func,options);
 yfit = feval(f,x);
 
-plot(ax,x,p)
+plot(ax,x,p,'.')
 hold(ax,'on')
 plot(ax,x,yfit,'LineWidth',2)
 hold(ax,'off')

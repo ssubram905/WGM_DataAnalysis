@@ -74,13 +74,14 @@ try
   
     if ~isempty(sel)
         y1 = detrendSteps(y1,sel)';
+        ylim(1,:) = [min(y1)-2, max(y1)+2];
     end
     
     fig = figure;
     fig.Units = 'centimeters';
-    fig.Position = [2 2 19 15];
+%     fig.Position = [5 10 9.2 14];
     fig.PaperUnits = 'centimeters';
-    fig.PaperPosition = [2 2 19 15];
+%     fig.PaperPosition = [5 10 9.2 14];
     
     subplot(2,1,1)
     plot(x,y1,'LineWidth',1)
@@ -98,15 +99,17 @@ try
     else
         ax1.YLim = [min(y1)-5 max(y1)+5];
     end
+    
     ax1.FontName = 'Helvetica';
-    ax1.FontSize = 22;
+    ax1.FontSize = 9;
     ax1.XLabel.Interpreter = 'latex';
-    ax1.XLabel.FontSize = 24;
+    ax1.XLabel.FontSize = 9;
     ax1.YLabel.Interpreter = 'latex';
     ax1.YLabel.String = ylabel_1;
-    ax1.YLabel.FontSize = 24;
+    ax1.YLabel.FontSize = 9;
     ax1.Units = 'centimeters';
-    ax1.Position = [3.5 8.6 15.25 5.5];
+%     ax1.Position = [3.5 8.6 8 2];
+
 %     ax.Position = [2.75 8 12 6];
     hold on
     if ~isempty(peaks.plot1Peaks.l)
@@ -133,13 +136,13 @@ try
         ax2.YLim = [min(y2)-5 max(y2)+5];
     end
     ax2.FontName = 'Helvetica';
-    ax2.FontSize = 22;
+    ax2.FontSize = 9;
     ax2.YLabel.Interpreter = 'latex';
     ax2.YLabel.String = ylabel_2;
-    ax2.YLabel.FontSize = 24;
+    ax2.YLabel.FontSize = 9;
     ax2.XLabel.Interpreter = 'latex';
     ax2.XLabel.String = xlabel;
-    ax2.XLabel.FontSize = 24;
+    ax2.XLabel.FontSize = 9;
     
     hold on
     if ~isempty(peaks.plot2Peaks.l)
@@ -149,9 +152,9 @@ try
     hold off
 
     ax2.Units = 'centimeters';
-    ax2.Position = [3.5 2.2 15.25 5.75];
+%     ax2.Position = [3.5 2.2 15.25 5.75];
     ax1.YLabel.Position(1) = ax2.YLabel.Position(1);
-    saveas(fig,figurename,'epsc');
+    saveas(fig,figurename,'pdf');
     saveas(fig,figurename,'png');
     close(fig);
 catch ME

@@ -12,7 +12,7 @@ addOptional(p,'sTime',defaultsTime,@(x) isnumeric(x) && isscalar(x) && (x >= 0))
 addOptional(p,'eTime',defaulteTime,@(x) isnumeric(x) && isscalar(x) && (x > 0));
 addOptional(p,'Fs',defaultFs,@(x) isnumeric(x) && isscalar(x) && (x > 0));
 addOptional(p,'scale',defaultScale,@(x) isfield(x,'m') && isfield(x,'c'));
-addOptional(p,'chNames',{'ai0','ai1'});
+addOptional(p,'chNames',{'ai1','ai2'});
 parse(p,fileinfo,varargin{:});
 
 fileinfo = p.Results.fileinfo;
@@ -32,9 +32,9 @@ end
 indCh1 = contains(channelNames,chNames{1});
 indCh2 = contains(channelNames,chNames{2});
 
-% plot1 = detrend(convertedData.Data.MeasuredData(indCh1).Data*scale.m+scale.c);
-plot1 = convertedData.Data.MeasuredData(indCh1).Data;
-plot2 = detrend(convertedData.Data.MeasuredData(indCh2).Data*scale.m+scale.c);
+plot1 = convertedData.Data.MeasuredData(indCh1).Data*scale.m;
+% plot1 = convertedData.Data.MeasuredData(indCh1).Data;
+plot2 = convertedData.Data.MeasuredData(indCh2).Data*scale.m;
 
 time  = linspace(sTime,eTime,length(plot1))';
 sIndex = 1;

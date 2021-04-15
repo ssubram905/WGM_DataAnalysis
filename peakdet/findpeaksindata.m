@@ -51,6 +51,9 @@ try
     if ~isempty(locs)
         s = zeros(1,length(locs));
         for i = 1:length(locs)
+            if locs(i) < N
+                N = locs(i) -1;
+            end
             s(i) = std(ydata(locs(i)-N:locs(i)+N));
             if s(i) >  sdev
                 peakdata.h = [peakdata.h;pks(i)];

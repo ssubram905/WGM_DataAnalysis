@@ -38,10 +38,10 @@ for i = 1:ndata
     plot2(:,i) = fileinfo.data(sIndex:eIndex,i+ndata+1);
     if ~contains(fileinfo.textdata(end),'[fm]')
         plot1(:,i) = plot1(:,i)*1e6;
-        plot2(:,i) = plot2(:,i)*1e6;
+        plot2(:,i) = plot2(:,i)*1e6;      
     end
 end
-
+fileinfo.textdata{end} = strrep(fileinfo.textdata{end},'nm','fm');
 results.sIndex = 1;
 results.eIndex = length(plot1);
 results.time = time;

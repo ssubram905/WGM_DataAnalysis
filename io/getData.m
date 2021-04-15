@@ -12,13 +12,13 @@ addRequired(p,'fileProps');
 addOptional(p,'sTime',defaultsTime,@(x) isnumeric(x) && isscalar(x) && (x >= 0));
 addOptional(p,'eTime',defaulteTime,@(x) isnumeric(x) && isscalar(x) && (x > 0));
 addOptional(p,'Fs',defaultFs,@(x) isnumeric(x) && isscalar(x) && (x > 0));
+% addOptional(p,'chNames',[{'ai0'};{'ai1'}]);
 parse(p,fileProps,varargin{:});
 
 fileProps = p.Results.fileProps;
 sTime = p.Results.sTime;
 eTime = p.Results.eTime;
 Fs = p.Results.Fs;
-
 
 if strcmpi(fileProps.ext,'.txt')
     results = fromTxtFile(fileProps.FileInfo, sTime,eTime,Fs);
