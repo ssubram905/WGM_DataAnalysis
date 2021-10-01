@@ -1,14 +1,14 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1229217656" file="D:\OneDrive - University of Exeter\MATLAB\DataAnalysis_Reflow\DataAnalysis_AutoReflow.prj" location="D:\OneDrive - University of Exeter\MATLAB\DataAnalysis_Reflow" name="DataAnalysis_AutoReflow" target="target.mlapps" target-name="Package App">
-    <param.appname>DataAnalysis_AutoReflow</param.appname>
+  <configuration build-checksum="3304701702" file="D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\DataAnalysis.prj" location="D:\OneDrive - University of Exeter\MATLAB\DataAnalysis" name="DataAnalysis" target="target.mlapps" target-name="Package App">
+    <param.appname>DataAnalysis</param.appname>
     <param.authnamewatermark>Sivaraman Subramanian</param.authnamewatermark>
-    <param.email>ss905@exeter.ac.uk</param.email>
+    <param.email>s.subramanian2@exeter.ac.uk</param.email>
     <param.company>University of Exeter</param.company>
-    <param.icon>${PROJECT_ROOT}\DataAnalysis_AutoReflow_resources\icon_24.png</param.icon>
+    <param.icon>${PROJECT_ROOT}\DataAnalysis_resources\icon_24.png</param.icon>
     <param.icons>
-      <file>${PROJECT_ROOT}\DataAnalysis_AutoReflow_resources\icon_48.png</file>
-      <file>${PROJECT_ROOT}\DataAnalysis_AutoReflow_resources\icon_24.png</file>
-      <file>${PROJECT_ROOT}\DataAnalysis_AutoReflow_resources\icon_16.png</file>
+      <file>${PROJECT_ROOT}\DataAnalysis_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\DataAnalysis_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\DataAnalysis_resources\icon_16.png</file>
     </param.icons>
     <param.summary>App to perform peak and step analysis of WGM signals exracted from spectra.</param.summary>
     <param.description>WGM peak analysis software
@@ -16,81 +16,67 @@ Detect peaks from Txt or TDMS files
 Detect steps from Text of TDMS files
 store data into .mat files
 Analyse stored data to output histograms</param.description>
-    <param.screenshot>C:\Users\ss905\AppData\Local\Temp\tp9ef2649a_fb9a_4cf6_b686_e339fdee2c9e.png</param.screenshot>
-    <param.version>1.1</param.version>
-    <param.products.name>
-      <item>MATLAB</item>
-      <item>Bioinformatics Toolbox</item>
-      <item>Curve Fitting Toolbox</item>
-      <item>Data Acquisition Toolbox</item>
-      <item>Econometrics Toolbox</item>
-      <item>Sensor Fusion and Tracking Toolbox</item>
-      <item>Signal Processing Toolbox</item>
-    </param.products.name>
-    <param.products.id>
-      <item>1</item>
-      <item>83</item>
-      <item>60</item>
-      <item>47</item>
-      <item>125</item>
-      <item>157</item>
-      <item>8</item>
-    </param.products.id>
-    <param.products.version>
-      <item>9.8</item>
-      <item>4.14</item>
-      <item>3.5.11</item>
-      <item>4.1</item>
-      <item>5.4</item>
-      <item>1.3</item>
-      <item>8.4</item>
-    </param.products.version>
+    <param.screenshot>C:\Users\ss905\AppData\Local\Temp\tpa01c7ef8_2dd3_4316_98a1_e937a9ef6ce1.png</param.screenshot>
+    <param.version>2.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
     <param.platforms />
     <param.output>${PROJECT_ROOT}</param.output>
-    <param.guid>7a0bb346-893d-423b-b5d9-010b02ae4a14</param.guid>
+    <param.guid>90968e5c-7095-4073-9b05-7bc4efdea13c</param.guid>
     <unset>
       <param.authnamewatermark />
-      <param.email />
       <param.company />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
       <param.platforms />
       <param.output />
     </unset>
     <fileset.main>
-      <file>${PROJECT_ROOT}\DataAnalysis_AutoReflow.mlapp</file>
+      <file>${PROJECT_ROOT}\DataAnalysis.mlapp</file>
     </fileset.main>
     <fileset.depfun>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\io\getHeaders.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\io\save\saveplots.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\io\save\savetomat.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\io\setfileProperties.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\io\tdms\getDescription.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\io\tdms\getsamplesPerSegment.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\misc\uniquestruct.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\peakdet\filterdata.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\peakdet\findpeaksindata.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\peakdet\findpeaksindata2.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\peakdet\getsdev.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\peakdet\grouppeaks.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\plot\detrendData.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\plot\plotdata.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\plot\plotpeakinfo.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\plot\plotpeaks.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\plot\plotsubpeaks.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataAnalysis\stepdet\stepDetect.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\convertToText.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\getChannelInfo.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\getData.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\getDataSize.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\getInputFile.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\getScanRate.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\getSegInfo.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\hasRawDataInSeg.m</file>
-      <file>D:\OneDrive - University of Exeter\MATLAB\DataExtraction\Convert_TDMS\LV2MatlabDataType.m</file>
+      <file>${PROJECT_ROOT}\io\getData.m</file>
+      <file>${PROJECT_ROOT}\io\getHeaders.m</file>
+      <file>${PROJECT_ROOT}\io\save\saveplots.m</file>
+      <file>${PROJECT_ROOT}\io\save\savetomat.m</file>
+      <file>${PROJECT_ROOT}\io\setfileProperties.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\convertTDMS.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\convertToText.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\fromTdmsFile.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\getChannelInfo.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\getDataSize.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\getDescription.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\getInputFile.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\getsamplesPerSegment.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\getScanRate.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\getSegInfo.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\hasRawDataInSeg.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\LV2MatlabDataType.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\postProcess.m</file>
+      <file>${PROJECT_ROOT}\io\tdms\readTDMS.m</file>
+      <file>${PROJECT_ROOT}\io\txt\fromTxtFile.m</file>
+      <file>${PROJECT_ROOT}\misc\uniquestruct.m</file>
+      <file>${PROJECT_ROOT}\peakdet\estVar.m</file>
+      <file>${PROJECT_ROOT}\peakdet\filterdata.m</file>
+      <file>${PROJECT_ROOT}\peakdet\findpeaksindata.m</file>
+      <file>${PROJECT_ROOT}\peakdet\findpeaksindata2.m</file>
+      <file>${PROJECT_ROOT}\peakdet\grouppeaks.m</file>
+      <file>${PROJECT_ROOT}\plot\detrendData.m</file>
+      <file>${PROJECT_ROOT}\plot\plotdata.m</file>
+      <file>${PROJECT_ROOT}\plot\plotpeakinfo.m</file>
+      <file>${PROJECT_ROOT}\plot\plotpeaks.m</file>
+      <file>${PROJECT_ROOT}\plot\plotsubpeaks.m</file>
+      <file>${PROJECT_ROOT}\stepdet\stepDetect.m</file>
+      <file>D:\OneDrive - University of Exeter\MATLAB\PeakFinder\findpeaksG.m</file>
+      <file>D:\OneDrive - University of Exeter\MATLAB\PeakFinder\findsteps.m</file>
+      <file>D:\OneDrive - University of Exeter\MATLAB\PlottingFunctions\detrendSteps.m</file>
     </fileset.depfun>
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file location="D:\OneDrive - University of Exeter\MATLAB" name="DataAnalysis_Reflow" optional="false">D:\OneDrive - University of Exeter\MATLAB\DataAnalysis_Reflow</file>
+      <file location="D:\OneDrive - University of Exeter\MATLAB" name="DataAnalysis" optional="false">D:\OneDrive - University of Exeter\MATLAB\DataAnalysis</file>
     </build-deliverables>
     <workflow />
     <matlab>
